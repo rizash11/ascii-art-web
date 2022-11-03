@@ -1,0 +1,26 @@
+{{define "base"}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascii-art-Web</title>
+</head>
+<body>
+    <h1>Ascii-art-Web</h1>
+    <form action="/ascii-art-web" method="POST">
+        <label>
+            Please provide some text to get translated to ascii-art
+            <input type="text" name="regular text">
+        </label>
+        
+        <button type="submit">Make ascii-art</button>
+    </form>
+
+    {{template "ascii-art" .}}
+</body>
+</html>
+
+{{end}}
